@@ -60,6 +60,7 @@ server.put("/users/:index", checkUserInArray, checkUserExist, (req, res) => {
   const { name } = req.body;
 
   users[index] = name;
+  return res.json(users);
 });
 
 //DELETE
